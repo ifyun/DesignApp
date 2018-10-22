@@ -1,0 +1,40 @@
+{
+    "hot_new": [
+        {
+            "image": "http://101.132.143.199/img/2018102019524980855.png",
+            "title": "One More Light",
+            "sub_title": "Linkin Park"
+        },
+        {
+            "image": "http://101.132.143.199/img/2018102019522674096.png",
+            "title": "Let Go",
+            "sub_title": "Avril Lavigne"
+        }
+    ],
+    "recommended": [
+        {
+            "image": "http://101.132.143.199/img/2018102019514724453.png",
+            "title": "Bridge to Terabithia"
+        },
+        {
+            "image": "http://101.132.143.199/img/2018102019523739822.png",
+            "title": "Life Is Beautiful"
+        },
+        {
+            "image": "http://101.132.143.199/img/2018102019512511614.png",
+            "title": "A Violent Flame"
+        }
+    ],
+    "top_rated": [
+        {
+            "image": "http://101.132.143.199/img/2018102019520193369.png",
+            "title": "Furious 7: Original Motion Picture Soundtrack",
+            "sub_title": "Various Artists"
+        },
+        {
+            "image": "http://101.132.143.199/img/2018102019521424949.png",
+            "title": "Halo 5: Guardians (Original Soundtrack)",
+            "sub_title": "Kazuma Jinnouchi"
+        }
+    ]
+}

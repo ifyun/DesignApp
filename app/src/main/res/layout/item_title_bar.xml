@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemTitleBar"
+            type="com.cloud.design.model.ItemTitleBar" />
+        <variable
+            name="itemTitleBarVM"
+            type="com.cloud.design.viewmodel.ItemTitleBarVM" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="@{itemTitleBar.title}"
+            tools:text="New Releases" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/bg_button_more"
+            android:onClick="@{v -> itemTitleBarVM.onMoreClick(v)}"
+            android:text="@string/button_more" />
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Design App</string>
+    <string name="show_dialog_info">Show Info Dialog</string>
+    <string name="list_activity">Show Multiple RecycleView</string>
+    <string name="dialog_button">OK</string>
+    <string name="dialog_message">Warning</string>
+    <string name="button_more">More</string>
+</resources>
