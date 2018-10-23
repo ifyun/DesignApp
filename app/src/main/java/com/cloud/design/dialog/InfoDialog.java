@@ -36,7 +36,7 @@ public class InfoDialog extends Dialog {
             LayoutInflater inflater =
                     (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            mLayout = inflater.inflate(R.layout.dialog, null, false);
+            mLayout = inflater.inflate(R.layout.dialog_info, null);
 
             mIcon = mLayout.findViewById(R.id.dialog_icon);
             mTitle = mLayout.findViewById(R.id.dialog_title);
@@ -53,7 +53,7 @@ public class InfoDialog extends Dialog {
         }
 
         /**
-         * Use Bitmap as dialog icon
+         * Use Bitmap as dialog_info icon
          */
         public Builder setIcon(Bitmap bitmap) {
             mIcon.setImageBitmap(bitmap);
@@ -82,12 +82,13 @@ public class InfoDialog extends Dialog {
 
         public InfoDialog create() {
             mButton.setOnClickListener(view -> {
+                if (mButtonClickListener != null)
+                    mButtonClickListener.onClick(view);
                 mDialog.dismiss();
-                mButtonClickListener.onClick(view);
             });
             mDialog.setContentView(mLayout);
-            mDialog.setCancelable(true);                //User can click back to close dialog
-            mDialog.setCanceledOnTouchOutside(false);   //User can not click outside area to close dialog
+            mDialog.setCancelable(true);                //User can click back to close dialog_info
+            mDialog.setCanceledOnTouchOutside(false);   //User can not click outside area to close dialog_info
             return mDialog;
         }
     }

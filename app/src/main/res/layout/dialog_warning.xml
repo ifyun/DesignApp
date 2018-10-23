@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        tools:text="Waring " />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:maxWidth="300dp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:textSize="18sp"
+        tools:text="This is a warning message!" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/dialog_button_negative"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:text="@string/button_negative" />
+
+        <Button
+            android:id="@+id/dialog_button_positive"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_positive_button"
+            android:textColor="#ffffff"
+            android:text="@string/button_positive" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="WarningDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/bg_dialog_warning</item>
+    </style>
+
 </resources>

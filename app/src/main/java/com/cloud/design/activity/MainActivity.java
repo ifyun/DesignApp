@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.cloud.design.R;
 import com.cloud.design.databinding.ActivityMainBinding;
 import com.cloud.design.dialog.InfoDialog;
+import com.cloud.design.dialog.WarningDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        mBinding.buttonShowDialog.setOnClickListener(v -> {
+        mBinding.buttonInfoDialog.setOnClickListener(v -> {
             InfoDialog infoDialog = new InfoDialog.Builder(this)
                     .setTitle("Done")
                     .setMessage("Something done")
@@ -28,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(this, "OK Clicked.", Toast.LENGTH_SHORT).show()
                     ).create();
             infoDialog.show();
+        });
+
+        mBinding.buttonWarningDialog.setOnClickListener(v -> {
+            WarningDialog warningDialog = new WarningDialog.Builder(this)
+                    .setTitle("Warning")
+                    .setMessage("This is a warning dialog.\nClick any button to close the dialog.")
+                    .create();
+            warningDialog.show();
         });
 
         mBinding.buttonShowRecycleView.setOnClickListener(v ->
