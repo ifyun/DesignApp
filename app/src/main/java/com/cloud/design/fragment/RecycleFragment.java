@@ -59,7 +59,7 @@ public class RecycleFragment extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //添加数据
+        //Add data
         if (dataSource != null) {
             Gson gson = new Gson();
             DataBean dataBean = gson.fromJson(dataSource, DataBean.class);
