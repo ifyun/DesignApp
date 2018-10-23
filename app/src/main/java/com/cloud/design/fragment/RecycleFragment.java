@@ -1,13 +1,18 @@
-package com.cloud.design.activity;
+package com.cloud.design.fragment;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.cloud.design.bean.DataBean;
-import com.cloud.design.databinding.ActivityListBinding;
+import com.cloud.design.databinding.FragmentRecycleBinding;
 import com.cloud.design.model.Item;
 import com.cloud.design.MultiListAdapter;
 import com.cloud.design.R;
@@ -18,25 +23,30 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListActivity extends AppCompatActivity {
+public class RecycleFragment extends Fragment {
 
     private List<Item> mItemList = new ArrayList<>();
-    private ActivityListBinding mBinding;
+    private FragmentRecycleBinding mBinding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_list);
-
         initData();
+    }
 
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 6);
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_recycle, container, false);
+
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 6);
         MultiListAdapter adapter = new MultiListAdapter(mItemList);
         adapter.setSpanCount(layoutManager);
-
         RecyclerView recyclerView = mBinding.recycleView;
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
+        return mBinding.getRoot();
     }
 
     private void initData() {

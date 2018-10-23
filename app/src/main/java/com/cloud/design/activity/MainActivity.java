@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mBinding.buttonShowRecycleView.setOnClickListener(v ->
-                startActivity(new Intent(this, ListActivity.class))
+                startActivity(new Intent(this, RecycleActivity.class))
         );
     }
 }
