@@ -1,4 +1,4 @@
-package com.cloud.design.dialog;
+package com.cloud.customviews;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,11 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.cloud.design.R;
-
 public class WarningDialog extends Dialog {
 
-    public WarningDialog(Context context, int themeResId) {
+    private WarningDialog(Context context, int themeResId) {
         super(context, themeResId);
     }
 

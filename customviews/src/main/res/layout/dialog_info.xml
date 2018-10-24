@@ -67,7 +67,7 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/bg_dialog_button"
             android:textColor="#ffffff"
-            android:text="@string/dialog_button">
+            android:text="@string/button_ok">
 
         </Button>
 

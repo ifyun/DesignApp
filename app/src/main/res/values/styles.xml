@@ -8,8 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="WarningDialogTheme" parent="Theme.AppCompat.Dialog">
-        <item name="android:windowBackground">@drawable/bg_dialog_warning</item>
+    <style name="Button" parent="Base.TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/bg_button</item>
     </style>
 
 </resources>

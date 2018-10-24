@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Design App</string>
-    <string name="show_dialog_info">Show Info Dialog</string>
-    <string name="show_dialog_warning">Show Warning Dialog</string>
-    <string name="list_activity">Show Multiple RecycleView</string>
-    <string name="dialog_button">OK</string>
+    <string name="show_dialog_info">Info Dialog</string>
+    <string name="show_dialog_warning">Warning Dialog</string>
+    <string name="recycle_activity">Multi-type RecycleView</string>
     <string name="dialog_message">Warning</string>
     <string name="button_more">More</string>
     <string name="button_positive">Yes</string>

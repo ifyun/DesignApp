@@ -1,10 +1,15 @@
 package com.cloud.design.viewmodel;
 
 import android.view.View;
-import android.widget.Toast;
+
+import com.cloud.customviews.ColoredToast;
+import com.cloud.design.R;
 
 public class ItemTitleBarVM {
     public void onMoreClick(View v) {
-        Toast.makeText(v.getContext(), "Clicked More", Toast.LENGTH_SHORT).show();
+        new ColoredToast.Maker(v.getContext())
+                .setColor(R.color.colorWhite, R.color.colorGreen)
+                .makeToast("Clicked More", ColoredToast.LENGTH_SHORT)
+                .show();
     }
 }

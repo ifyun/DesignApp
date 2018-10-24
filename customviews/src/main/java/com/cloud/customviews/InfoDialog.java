@@ -1,4 +1,4 @@
-package com.cloud.design.dialog;
+package com.cloud.customviews;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.cloud.design.R;
 
 public class InfoDialog extends Dialog {
 
