@@ -10,20 +10,26 @@
         tools:context=".activity.MainActivity">
 
         <Button
+            android:id="@+id/button_toast"
+            style="@style/Button"
+            android:text="@string/show_colored_toast" />
+
+        <Button
             android:id="@+id/button_info_dialog"
             style="@style/Button"
+            android:layout_marginTop="4dp"
             android:text="@string/show_dialog_info" />
 
         <Button
             android:id="@+id/button_warning_dialog"
             style="@style/Button"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:text="@string/show_dialog_warning" />
 
         <Button
             android:id="@+id/button_show_recycle_view"
             style="@style/Button"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:text="@string/recycle_activity" />
 
     </LinearLayout>

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.cloud.customviews.ColoredToast;
 import com.cloud.design.R;
@@ -21,6 +23,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+        //Colored Toast
+        mBinding.buttonToast.setOnClickListener(v -> {
+            PopupMenu popupMenu = new PopupMenu(this, v);
+            popupMenu.getMenuInflater().inflate(R.menu.menu_toast, popupMenu.getMenu());
+            popupMenu.setOnMenuItemClickListener(item -> {
+                switch (item.getItemId()) {
+                    case R.id.blue_toast:
+                        new ColoredToast.Maker(this)
+                                .setColor(R.color.colorWhite, R.color.colorBlue)
+                                .makeToast("This is a blue toast!", Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+                    case  R.id.green_toast:
+                        new ColoredToast.Maker(this)
+                                .setColor(R.color.colorWhite, R.color.colorGreen)
+                                .makeToast("This is a green toast!", Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+                    case R.id.yellow_toast:
+                        new ColoredToast.Maker(this)
+                                .setColor(R.color.colorWhite, R.color.colorYellow)
+                                .makeToast("This is a yellow toast!", Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+                }
+                return true;
+            });
+            popupMenu.show();
+        });
+
         //Info Dialog
         mBinding.buttonInfoDialog.setOnClickListener(v -> {
             InfoDialog infoDialog = new InfoDialog.Builder(this)
@@ -29,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     .setButton("OK", view ->
                             new ColoredToast.Maker(this)
                                     .setColor(R.color.colorWhite, R.color.colorGreen)
-                                    .makeToast("Clicked OK", ColoredToast.LENGTH_SHORT)
+                                    .makeToast("Clicked OK", Toast.LENGTH_SHORT)
                                     .show()
                     ).create();
             infoDialog.show();
@@ -43,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("Confirm", view ->
                         new ColoredToast.Maker(this)
                                 .setColor(R.color.colorWhite, R.color.colorBlue)
-                                .makeToast("Confirm clicked", ColoredToast.LENGTH_SHORT)
+                                .makeToast("Confirm clicked", Toast.LENGTH_SHORT)
                                 .show()
                     )
                     .create();

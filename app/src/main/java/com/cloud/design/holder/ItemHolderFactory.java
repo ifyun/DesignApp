@@ -12,7 +12,7 @@ public class ItemHolderFactory {
     public static final int ITEM_SMALL = 1;
     public static final int ITEM_TITLE_BAR = 2;
 
-    @IntDef({
+    @IntDef(value = {
             ITEM_LARGE,
             ITEM_SMALL,
             ITEM_TITLE_BAR

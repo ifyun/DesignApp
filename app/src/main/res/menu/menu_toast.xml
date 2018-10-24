@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/blue_toast"
+        android:title="@string/toast_blue" />
+
+    <item
+        android:id="@+id/green_toast"
+        android:title="@string/toast_green" />
+
+    <item
+        android:id="@+id/yellow_toast"
+        android:title="@string/toast_yellow" />
+
+</menu>

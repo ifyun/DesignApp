@@ -38,9 +38,7 @@ public class ColoredToast extends Toast {
         }
 
         /**
-         * Set text color and background color for toast
-         * @param textColor Color resource id
-         * @param backgroundColor Color resource id
+         * Set text color and background color for toast by resource id
          */
         public Maker setColor(@ColorRes int textColor, @ColorRes int backgroundColor) {
             GradientDrawable drawable = new GradientDrawable();
@@ -48,6 +46,15 @@ public class ColoredToast extends Toast {
             drawable.setCornerRadius(mTextMessage.getLayoutParams().height / 2);
             mToastView.setBackground(drawable);
             mTextMessage.setTextColor(mContext.getColor(textColor));
+            return this;
+        }
+
+        /**
+         * Set position
+         * @see android.view.Gravity
+         */
+        public Maker setGravity(int gravity, int xOffset, int yOffset) {
+            mToast.setGravity(gravity, xOffset, yOffset);
             return this;
         }
 
