@@ -1,5 +1,5 @@
 # DesignApp
-## This is an application for learning design, such as custom dialog, muli-item RecycleView and so on.
+## This is an application for learning design, such as custom views(Dialog, Button, Toast and so on), muli-type RecycleView and some UI Demos.
 
 Name|Image
 ----|----
