@@ -48,7 +48,7 @@ public class ProgressButton extends AppCompatButton {
             //Get default normal color
             int defaultButtonColor = getResources().getColor(R.color.colorGray, null);
             //Get custom normal color
-            int buttonColor = attr.getColor(R.styleable.ProgressButton_normalColor, defaultButtonColor);
+            int buttonColor = attr.getColor(R.styleable.ProgressButton_buttonColor, defaultButtonColor);
             //Set normal color
             mDrawableButton.setColor(buttonColor);
 
@@ -89,13 +89,16 @@ public class ProgressButton extends AppCompatButton {
             float progressWidth =
                     (float) getMeasuredWidth() * ((float) mProgress / (float) mMaxProgress);
 
+            //If progress width less than 2x corner radius, the radius of progress will be wrong
             if (progressWidth < mCornerRadius * 2) {
                 progressWidth = mCornerRadius * 2;
             }
 
+            //Set rect of progress
             mDrawableProgress.setBounds((int) mProgressMargin, (int) mProgressMargin,
                     (int) (progressWidth - mProgressMargin), getMeasuredHeight() - (int) mProgressMargin);
 
+            //Draw progress
             mDrawableProgress.draw(canvas);
 
             if (mProgress == mMaxProgress) {
