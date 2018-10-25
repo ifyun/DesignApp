@@ -8,6 +8,7 @@
     <string name="button_more">More</string>
     <string name="button_positive">Yes</string>
     <string name="button_negative">Cancel</string>
+    <string name="button_progress">Progress Button</string>
     <string name="toast_blue">Blue Toast</string>
     <string name="toast_green">Green Toast</string>
     <string name="toast_yellow">Yellow Toast</string>
