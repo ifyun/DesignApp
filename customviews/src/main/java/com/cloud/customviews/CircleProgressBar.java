@@ -90,7 +90,8 @@ public class CircleProgressBar extends AppCompatTextView {
         canvas.drawArc(mBackArea, 0, 360, false, mProgressBackPaint);
 
         if (mProgress > mMinProgress && mProgress <= mMaxProgress) {
-            float progressAngle = ((float) mProgress / (mMaxProgress - mMinProgress)) * 360;
+            //Calculate the angle of progress
+            float progressAngle = ((float) (mProgress - mMinProgress) / (mMaxProgress - mMinProgress)) * 360;
             //Draw current progress
             canvas.drawArc(mProgressArea, -90, progressAngle, false, mProgressPaint);
         }

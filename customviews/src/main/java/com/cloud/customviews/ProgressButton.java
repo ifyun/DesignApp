@@ -88,8 +88,9 @@ public class ProgressButton extends AppCompatButton {
     @Override
     protected void onDraw(Canvas canvas) {
         if (mProgress > mMinProgress && mProgress <= mMaxProgress && !mFinish) {
+            //Calculate the width of progress
             float progressWidth =
-                    (float) getMeasuredWidth() * ((float) mProgress / mMaxProgress - mMinProgress);
+                    (float) getMeasuredWidth() * ((float) (mProgress - mMinProgress) / mMaxProgress - mMinProgress);
 
             //If progress width less than 2x corner radius, the radius of progress will be wrong
             if (progressWidth < mCornerRadius * 2) {
