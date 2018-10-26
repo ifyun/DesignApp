@@ -3,6 +3,7 @@
 
 Name|Image
 ----|----
+Circle ProgressBar|![Circle ProgressBar](https://github.com/imcloudfloating/Images/blob/master/circle_progress_bar.gif?raw=true)
 Progress Button|![Progress Button](https://github.com/imcloudfloating/Images/blob/master/progress_button.gif?raw=true)
 Colored Toast|![Colored Toast](https://github.com/imcloudfloating/Images/blob/master/colored_toast.gif?raw=true)
 Warning Dialog|![Warning Dialog](https://github.com/imcloudfloating/Images/blob/master/dialog_warning.png?raw=true)
