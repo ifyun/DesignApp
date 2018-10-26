@@ -38,6 +38,12 @@
             android:layout_marginTop="4dp"
             android:text="@string/button_progress" />
 
+        <Button
+            android:id="@+id/button_circle_progress"
+            style="@style/Button"
+            android:layout_marginTop="4dp"
+            android:text="@string/circle_progress_bar" />
+
     </LinearLayout>
 
 </layout>

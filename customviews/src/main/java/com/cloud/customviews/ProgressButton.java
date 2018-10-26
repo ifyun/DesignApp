@@ -24,15 +24,15 @@ public class ProgressButton extends AppCompatButton {
 
     public ProgressButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs);
+        initialize(context, attrs);
     }
 
     public ProgressButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init(context, attrs);
+        initialize(context, attrs);
     }
 
-    private void init(Context context, AttributeSet attrs) {
+    private void initialize(Context context, AttributeSet attrs) {
         //Progress background drawable
         mDrawableProgressBackground = new GradientDrawable();
         //Progress drawable
@@ -40,22 +40,22 @@ public class ProgressButton extends AppCompatButton {
         //Normal drawable
         mDrawableButton = new GradientDrawable();
 
+        //Get default normal color
+        int defaultButtonColor = getResources().getColor(R.color.colorGray, null);
+        //Get default progress color
+        int defaultProgressColor = getResources().getColor(R.color.colorGreen, null);
+        //Get default progress background color
+        int defaultBackColor = getResources().getColor(R.color.colorGray, null);
+
         TypedArray attr = context.obtainStyledAttributes(attrs, R.styleable.ProgressButton);
 
         try {
             mProgressMargin = attr.getDimension(R.styleable.ProgressButton_progressMargin, mProgressMargin);
             mCornerRadius = attr.getDimension(R.styleable.ProgressButton_cornerRadius, mCornerRadius);
-            //Get default normal color
-            int defaultButtonColor = getResources().getColor(R.color.colorGray, null);
             //Get custom normal color
             int buttonColor = attr.getColor(R.styleable.ProgressButton_buttonColor, defaultButtonColor);
             //Set normal color
             mDrawableButton.setColor(buttonColor);
-
-            //Get default progress color
-            int defaultProgressColor = getResources().getColor(R.color.colorGreen, null);
-            //Get default progress background color
-            int defaultBackColor = getResources().getColor(R.color.colorGray, null);
             //Get custom progress background color
             int progressBackColor = attr.getColor(R.styleable.ProgressButton_progressBackColor, defaultBackColor);
             //Set progress background drawable color
@@ -67,7 +67,9 @@ public class ProgressButton extends AppCompatButton {
 
             //Get default progress
             mProgress = attr.getInteger(R.styleable.ProgressButton_progress, mProgress);
-            //Get max progress
+            //Get minimum progress
+            mMinProgress = attr.getInteger(R.styleable.ProgressButton_minProgress, mMinProgress);
+            //Get maximize progress
             mMaxProgress = attr.getInteger(R.styleable.ProgressButton_maxProgress, mMaxProgress);
 
         } finally {
@@ -87,7 +89,7 @@ public class ProgressButton extends AppCompatButton {
     protected void onDraw(Canvas canvas) {
         if (mProgress > mMinProgress && mProgress <= mMaxProgress && !mFinish) {
             float progressWidth =
-                    (float) getMeasuredWidth() * ((float) mProgress / (float) mMaxProgress);
+                    (float) getMeasuredWidth() * ((float) mProgress / mMaxProgress - mMinProgress);
 
             //If progress width less than 2x corner radius, the radius of progress will be wrong
             if (progressWidth < mCornerRadius * 2) {
@@ -109,6 +111,9 @@ public class ProgressButton extends AppCompatButton {
         super.onDraw(canvas);
     }
 
+    /**
+     * Set current progress
+     */
     public void setProgress(int progress) {
         if (!mFinish) {
             mProgress = progress;
@@ -119,6 +124,10 @@ public class ProgressButton extends AppCompatButton {
 
     public void setMaxProgress(int maxProgress) {
         mMaxProgress = maxProgress;
+    }
+
+    public void setMinProgress(int minProgress) {
+        mMinProgress = minProgress;
     }
 
     public void reset() {

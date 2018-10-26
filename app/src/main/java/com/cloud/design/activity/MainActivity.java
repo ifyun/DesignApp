@@ -20,9 +20,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+        setListener();
+    }
+
+    private void setListener() {
         //Colored Toast
         mBinding.buttonToast.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(this, v);
@@ -90,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
         //ProgressButton
         mBinding.buttonProgress.setOnClickListener(v ->
                 startActivity(new Intent(this, ProgressButtonActivity.class))
+        );
+
+        mBinding.buttonCircleProgress.setOnClickListener(v ->
+                startActivity(new Intent(this, ProgressBarActivity.class))
         );
     }
 }

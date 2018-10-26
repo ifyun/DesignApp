@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".activity.ProgressBarActivity">
+
+        <com.cloud.customviews.CircleProgressBar
+            android:id="@+id/progress_green"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:textColor="@color/colorGreen"
+            android:textSize="20sp"
+            android:text="@string/circle_progress_bar"
+            app:progressBackColor="@color/colorGray"
+            app:progressColor="@color/colorGreen"
+            app:progressWidth="8dp"
+            tools:progress="20" />
+
+        <com.cloud.customviews.CircleProgressBar
+            android:id="@+id/progress_yellow"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorYellow"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="@string/circle_progress_bar"
+            app:progressBackColor="@color/colorGray"
+            app:progressColor="@color/colorYellow"
+            app:progressWidth="16dp"
+            tools:progress="30" />
+
+        <Button
+            android:id="@+id/button_start_progress"
+            style="@style/Button"
+            android:layout_width="150dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/start_progress" />
+
+    </LinearLayout>
+
+</layout>

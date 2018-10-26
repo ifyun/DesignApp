@@ -4,6 +4,7 @@
     <string name="show_dialog_warning">Warning Dialog</string>
     <string name="show_colored_toast">Colored Toast</string>
     <string name="recycle_activity">Multi-type RecycleView</string>
+    <string name="start_progress">Start Progress</string>
     <string name="dialog_message">Warning</string>
     <string name="button_more">More</string>
     <string name="button_positive">Yes</string>
@@ -12,4 +13,5 @@
     <string name="toast_blue">Blue Toast</string>
     <string name="toast_green">Green Toast</string>
     <string name="toast_yellow">Yellow Toast</string>
+    <string name="circle_progress_bar">Circle ProgressBar</string>
 </resources>
