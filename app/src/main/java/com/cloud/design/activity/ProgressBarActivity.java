@@ -32,6 +32,7 @@ public class ProgressBarActivity extends AppCompatActivity {
                 mBinding.progressGreen.setText(MessageFormat.format("{0}%", progress));
                 mBinding.progressYellow.setProgress(progress);
                 mBinding.progressYellow.setText(MessageFormat.format("{0}%", progress));
+                mBinding.fanProgress.setProgress(progress);
                 progress += 5;
                 try {
                     Thread.sleep(100);

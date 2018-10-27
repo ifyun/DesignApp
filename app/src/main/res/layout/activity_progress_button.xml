@@ -6,35 +6,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        tools:context=".activity.ProgressButtonActivity">
+        android:orientation="vertical">
 
-        <com.cloud.customviews.ProgressButton
-            android:id="@+id/button_progress_green"
-            android:layout_width="270dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textAllCaps="false"
-            android:textColor="@color/colorWhite"
-            android:text="@string/button_progress"
-            app:cornerRadius="8dp"
-            app:progressMargin="2dp"
-            app:progressColor="@color/colorGreen"
-            app:buttonColor="@color/colorGreen" />
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/button_progress"
+            app:titleTextColor="@color/colorWhite"
+            android:background="@color/colorPrimary">
 
-        <com.cloud.customviews.ProgressButton
-            android:id="@+id/button_progress_blue"
-            android:layout_width="270dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/colorWhite"
-            android:textAllCaps="false"
-            android:text="@string/button_progress"
-            app:cornerRadius="24dp"
-            app:progressMargin="2dp"
-            app:progressColor="@color/colorYellow"
-            app:buttonColor="@color/colorYellow" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:context=".activity.ProgressButtonActivity">
+
+            <com.cloud.customviews.ProgressButton
+                android:id="@+id/button_progress_green"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:text="@string/button_progress"
+                app:cornerRadius="8dp"
+                app:progressMargin="2dp"
+                app:progressColor="@color/colorGreen"
+                app:buttonColor="@color/colorGreen" />
+
+            <com.cloud.customviews.ProgressButton
+                android:id="@+id/button_progress_blue"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:text="@string/button_progress"
+                app:cornerRadius="24dp"
+                app:progressMargin="2dp"
+                app:progressColor="@color/colorYellow"
+                app:buttonColor="@color/colorYellow" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
