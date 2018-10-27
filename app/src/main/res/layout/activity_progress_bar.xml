@@ -75,10 +75,12 @@
                     style="@style/Button"
                     android:layout_width="150dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/start_progress"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/fan_progress" />
+                    app:layout_constraintTop_toBottomOf="@id/fan_progress"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
