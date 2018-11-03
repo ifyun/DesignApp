@@ -24,7 +24,7 @@ public class PlayerActivity extends AppCompatActivity {
     private static final int STATE_PLAY = 1;
     private static final int STATE_STOP = -1;
 
-    private int mState;
+    private int mState = 65535;
 
     private MediaPlayer mMediaPlayer;
     private Button mButtonPlay;
@@ -45,7 +45,7 @@ public class PlayerActivity extends AppCompatActivity {
         mMediaPlayer = new MediaPlayer();
 
         try {
-            AssetFileDescriptor descriptor = getAssets().openFd("When You Love Someone.mp3");
+            AssetFileDescriptor descriptor = getAssets().openFd("See You Again.mp3");
             mMediaPlayer.setDataSource(descriptor);
             mMediaPlayer.prepareAsync();
         } catch (IOException e) {
@@ -61,7 +61,6 @@ public class PlayerActivity extends AppCompatActivity {
 
         mMediaPlayer.setOnCompletionListener(mp -> {
             Log.d("PlayerActivity", "onCompletion");
-            //mTimer.cancel();
             mState = STATE_STOP;
             progressBar.setProgress(mp.getDuration());
             mAnimator.end();
@@ -80,7 +79,7 @@ public class PlayerActivity extends AppCompatActivity {
 
                 if (mState == STATE_PAUSE) {
                     mAnimator.resume();
-                } else {
+                } else if (mState == STATE_STOP) {
                     mAnimator.start();
                 }
                 mState = STATE_PLAY;
