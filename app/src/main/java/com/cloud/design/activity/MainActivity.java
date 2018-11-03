@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     .setMessage("This is a warning dialog.\nClick any button to close the dialog.")
                     .setPositiveButton("Confirm", view ->
                             new ColoredToast.Maker(this)
-                                    .setColor(R.color.colorWhite, R.color.colorBlue)
+                                    .setColor(R.color.colorWhite, R.color.colorRed)
                                     .makeToast("Confirm clicked", Toast.LENGTH_SHORT)
                                     .show()
                     )
@@ -97,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
 
         mBinding.buttonCircleProgress.setOnClickListener(v ->
                 startActivity(new Intent(this, ProgressBarActivity.class))
+        );
+
+        mBinding.buttonSimplePlayer.setOnClickListener(v ->
+                startActivity(new Intent(this, PlayerActivity.class))
         );
     }
 }

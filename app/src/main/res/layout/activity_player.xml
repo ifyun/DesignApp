@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PlayerActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.cloud.customviews.CircleProgressBar
+                android:id="@+id/progress"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:progressWidth="4dp"
+                app:progressColor="@color/colorBlue"
+                tools:progress="10" />
+
+            <com.cloud.customviews.CircleImageView
+                android:id="@+id/album_image"
+                android:layout_width="284dp"
+                android:layout_height="284dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/album" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:text="@string/music_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/artist_name" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="start|center_vertical"
+                android:background="@drawable/btn_previous"/>
+
+            <Button
+                android:id="@+id/button_play"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center|center_vertical"
+                android:background="@drawable/btn_play"/>
+
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/btn_next" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

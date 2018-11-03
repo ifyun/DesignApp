@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Design App</string>
+    <string name="app_name">Design Demo</string>
     <string name="show_dialog_info">Info Dialog</string>
     <string name="show_dialog_warning">Warning Dialog</string>
     <string name="show_colored_toast">Colored Toast</string>
@@ -10,8 +10,11 @@
     <string name="button_positive">Yes</string>
     <string name="button_negative">Cancel</string>
     <string name="button_progress">Progress Button</string>
+    <string name="button_simple_player">Simple Player</string>
     <string name="toast_blue">Blue Toast</string>
     <string name="toast_green">Green Toast</string>
     <string name="toast_yellow">Yellow Toast</string>
     <string name="circle_progress_bar">Circle ProgressBar</string>
+    <string name="music_name">When You Love Someone</string>
+    <string name="artist_name">Bethany Dillon</string>
 </resources>

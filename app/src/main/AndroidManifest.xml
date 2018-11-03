@@ -22,7 +22,8 @@
         </activity>
         <activity android:name=".activity.RecycleActivity" />
         <activity android:name=".activity.ProgressButtonActivity" />
-        <activity android:name=".activity.ProgressBarActivity"></activity>
+        <activity android:name=".activity.ProgressBarActivity" />
+        <activity android:name=".activity.PlayerActivity" android:theme="@style/LightStatusBar" />
     </application>
 
 </manifest>

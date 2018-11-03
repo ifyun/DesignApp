@@ -118,4 +118,8 @@ public class CircleProgressBar extends AppCompatTextView {
         mProgress = progress;
         invalidate();
     }
+
+    public void setMaxProgress(int maxProgress) {
+        mMaxProgress = maxProgress;
+    }
 }

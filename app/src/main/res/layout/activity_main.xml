@@ -11,55 +11,84 @@
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
             app:title="@string/app_name"
             app:titleTextColor="@color/colorWhite"
-            android:background="@color/colorPrimary">
+            app:navigationIcon="@drawable/ic_menu">
 
         </android.support.v7.widget.Toolbar>
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            tools:context=".activity.MainActivity">
+            android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/button_toast"
-                style="@style/Button"
-                android:text="@string/show_colored_toast" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                tools:context=".activity.MainActivity">
 
-            <Button
-                android:id="@+id/button_info_dialog"
-                style="@style/Button"
-                android:layout_marginTop="4dp"
-                android:text="@string/show_dialog_info" />
+                <TextView
+                    android:id="@+id/button_toast"
+                    style="@style/Button"
+                    android:text="@string/show_colored_toast"
+                    android:drawableStart="@drawable/ic_more"
+                    android:drawablePadding="4dp"/>
 
-            <Button
-                android:id="@+id/button_warning_dialog"
-                style="@style/Button"
-                android:layout_marginTop="4dp"
-                android:text="@string/show_dialog_warning" />
+                <TextView
+                    android:id="@+id/button_info_dialog"
+                    style="@style/Button"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/show_dialog_info"
+                    android:drawableStart="@drawable/ic_info"
+                    android:drawablePadding="4dp" />
 
-            <Button
-                android:id="@+id/button_show_recycle_view"
-                style="@style/Button"
-                android:layout_marginTop="4dp"
-                android:text="@string/recycle_activity" />
+                <TextView
+                    android:id="@+id/button_warning_dialog"
+                    style="@style/Button"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/show_dialog_warning"
+                    android:drawableStart="@drawable/ic_warning"
+                    android:drawablePadding="4dp" />
 
-            <Button
-                android:id="@+id/button_progress"
-                style="@style/Button"
-                android:layout_marginTop="4dp"
-                android:text="@string/button_progress" />
+                <TextView
+                    android:id="@+id/button_show_recycle_view"
+                    style="@style/Button"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/recycle_activity"
+                    android:drawableStart="@drawable/ic_list"
+                    android:drawablePadding="4dp" />
 
-            <Button
-                android:id="@+id/button_circle_progress"
-                style="@style/Button"
-                android:layout_marginTop="4dp"
-                android:text="@string/circle_progress_bar" />
+                <TextView
+                    android:id="@+id/button_progress"
+                    style="@style/Button"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/button_progress"
+                    android:drawableStart="@drawable/ic_progress"
+                    android:drawablePadding="4dp" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/button_circle_progress"
+                    style="@style/Button"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/circle_progress_bar"
+                    android:drawableStart="@drawable/ic_circle_bar"
+                    android:drawablePadding="4dp" />
+
+                <TextView
+                    android:id="@+id/button_simple_player"
+                    style="@style/Button"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/button_simple_player"
+                    android:drawableStart="@drawable/ic_player"
+                    android:drawablePadding="4dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 
