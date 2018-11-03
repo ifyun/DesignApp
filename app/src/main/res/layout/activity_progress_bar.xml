@@ -72,10 +72,12 @@
 
                 <Button
                     android:id="@+id/button_start_progress"
-                    style="@style/Button"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_button"
                     android:text="@string/start_progress"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
