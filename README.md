@@ -1,8 +1,8 @@
 # DesignApp
 
-![Stars](https://img.shields.io/github/stars/imcloudfloating/ProgressBar.svg)
-![Forks](https://img.shields.io/github/forks/imcloudfloating/ProgressBar.svg)
-![License](https://img.shields.io/github/license/imcloudfloating/ProgressBar.svg)
+![Stars](https://img.shields.io/github/stars/imcloudfloating/DesignApp.svg)
+![Forks](https://img.shields.io/github/forks/imcloudfloating/DesignApp.svg)
+![License](https://img.shields.io/github/license/imcloudfloating/DesignApp.svg)
 
 This is an application for learning design, such as custom views(Dialog, Button, Toast and so on), muli-type RecycleView and some UI Demos.
 
